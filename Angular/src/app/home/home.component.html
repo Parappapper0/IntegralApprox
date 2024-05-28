@@ -1,0 +1,83 @@
+<div class="container-fluid" *ngIf="!resultIsReady">
+    <form name="form" (submit)="onSubmit()">
+      <table class="inputs-field" *ngIf="!show">
+        <tr>
+          <td colspan="2"><label for="n">Definire numero intervalli:</label><b class="text-danger" *ngIf="nError"> *</b></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input [(ngModel)]="form.n" type="number" class="form-control mx-2 n-input" name="n" id="n" min="0" required>
+            
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><label for="bounds">Definire estremi intervallo:</label></td>
+        </tr>
+        <tr id="bounds" name="bounds">
+          <td><label for="boundA"> A </label><b class="text-danger" *ngIf="boundAError"> *</b>
+            <input [(ngModel)]="form.boundA" type="number" class="form-control mx-2 bounds-inputs" name="boundA" id="boundA" required>
+            
+          </td>
+          <td>
+            <label for="boundB"> B </label><b class="text-danger" *ngIf="boundBError"> *</b>
+            <input [(ngModel)]="form.boundB" type="number" class="form-control mx-2 bounds-inputs" name="boundB" id="boundB" required>
+            
+          </td>
+        </tr>
+      </table>
+      <div class="inputs-field">
+          <div class="my-2">
+            <label for="" *ngIf="!show && form.function =='' ">Inserire la funzione da <br>approssimare <b class="text-danger" *ngIf="functionError"> *</b></label>
+          </div>
+          <button class="btn btn-warning" (click)="show=!show; errors=false;" *ngIf="!show">mostra tastiera</button>
+          
+          <button class="btn btn-warning my-2" (click)="show=!show; errors=false;" *ngIf="show">nascondi tastiera</button>
+          <app-calculator *ngIf="show"  [inputCodeExpression]="codeExpression" [inputExpression]="form.function" (emitCodeExpression)="updateCodeExpression($event)" (emitExpression)="updateExpression($event)" ></app-calculator>
+          <div class="my-3" *ngIf="!show && form.function !='' ">
+            <label for="function">funzione scelta: </label> 
+            <input [(ngModel)]="form.function" type="text" class="form-control" [value]="form.function" name="function" id="function" required disabled>
+          </div>  
+      </div>
+
+
+      <div *ngIf="!show">
+        <div class="inputs-field label-radio">
+          <label for="methods">Scegliere il metodo di approssimazione: </label><b class="text-danger" *ngIf="methodError"> *</b>
+        </div>
+        <div class="inputs-field" name="methods" id="methods">
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input [(ngModel)]="form.method" type="radio" class="btn-check" name="methods" value="Rectangles" id="Rectangles" autocomplete="off" required checked>
+            <label class="btn btn-outline-warning" for="Rectangles">Rettangoli</label>
+          
+            <input [(ngModel)]="form.method" type="radio" class="btn-check" name="methods" value="Trapezoids" id="Trapezoids" autocomplete="off" required>
+            <label class="btn btn-outline-warning" for="Trapezoids">Trapezi</label>
+          
+            <input [(ngModel)]="form.method" type="radio" class="btn-check" name="methods" value="Parables" id="Parables" autocomplete="off" required>
+            <label class="btn btn-outline-warning" for="Parables">Parabole</label>
+          </div>
+        </div>
+      </div>
+      <div class="inputs-field" *ngIf="!show">
+        <button type="submit" class="btn btn-outline-custom">INVIA</button>
+      </div>
+      <p class="text-danger my-3" *ngIf="errors"> * È necessario compilare questi campi </p>
+    </form>
+</div>
+
+<div class="container-fluid" *ngIf="resultIsReady">
+  <div class="title"><b>ƒ(x)={{form.function}}</b></div>
+  
+  <div class="results">
+    Risultato: {{value}}
+  </div>
+  <div class="results">
+    Tempo impiegato: {{time}}
+  </div>
+  <div>
+    <button class="btn btn-warning" (click)="showGraph=!showGraph;"  *ngIf="!showGraph">mostra grafico (WIP)</button>
+    <button class="btn btn-warning my-2 " (click)="showGraph=!showGraph;" *ngIf="showGraph">nascondi grafico</button>
+    <app-chart [myFx]="form.function" *ngIf="showGraph"></app-chart>
+  </div>
+  <button (click)="resultIsReady=!resultIsReady" class="btn btn-outline-custom back-btn d-inline-block" *ngIf="!showGraph">Torna indietro</button>
+</div>

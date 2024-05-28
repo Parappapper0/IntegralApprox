@@ -1,0 +1,8 @@
+﻿  Source.c
+C:\Users\itismeucci\source\repos\Project2\Source.c(32,50): warning C4047: 'function': 'PADDRINFOA *' differs in levels of indirection from 'int *'
+C:\Users\itismeucci\source\repos\Project2\Source.c(32,43): warning C4024: 'getaddrinfo': different types for formal and actual parameter 4
+C:\Users\itismeucci\source\repos\Project2\Source.c(44,22): warning C4047: 'function': 'PADDRINFOA' differs in levels of indirection from 'int'
+C:\Users\itismeucci\source\repos\Project2\Source.c(44,16): warning C4024: 'freeaddrinfo': different types for formal and actual parameter 1
+C:\Users\itismeucci\source\repos\Project2\Source.c(52,22): warning C4047: 'function': 'PADDRINFOA' differs in levels of indirection from 'int'
+C:\Users\itismeucci\source\repos\Project2\Source.c(52,16): warning C4024: 'freeaddrinfo': different types for formal and actual parameter 1
+  Project2.vcxproj -> C:\Users\itismeucci\Desktop\Debug\Project2.exe

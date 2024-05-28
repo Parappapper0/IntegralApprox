@@ -1,0 +1,47 @@
+<div  id="calculator">
+    <div> <!-- Output -->
+      <input id="textbox" type="text" [value]="expression" disabled>
+    </div>
+  
+    <br/>
+  
+    <div class="button-table"> <!-- Griglia Pulsanti -->
+      <mat-grid-list cols="4" rowHeight="3:2" gutterSize="6px">
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('S')" class="btn btn-outline-light" >asin</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('C')" class="btn btn-outline-light" >acos</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('T')" class="btn btn-outline-light" >atan</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('d')" class="btn btn-outline-light" >⌫</button></mat-grid-tile>
+
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('s')" class="btn btn-outline-light" >sin</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('c')" class="btn btn-outline-light" >cos</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('t')" class="btn btn-outline-light" >tan</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('π')" class="btn btn-outline-light" >π</button></mat-grid-tile>
+
+
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('1')" class="btn btn-outline-light" >1</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('2')" class="btn btn-outline-light" >2</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('3')" class="btn btn-outline-light" >3</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('+')" class="btn btn-outline-light" >＋</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('4')" class="btn btn-outline-light" >4</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('5')" class="btn btn-outline-light" >5</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('6')" class="btn btn-outline-light" >6</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('-')" class="btn btn-outline-light" >−</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('7')" class="btn btn-outline-light" >7</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('8')" class="btn btn-outline-light" >8</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('9')" class="btn btn-outline-light" >9</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('*')" class="btn btn-outline-light" >∗</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('(')" class="btn btn-outline-light" >(</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('0')" class="btn btn-outline-light" >0</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression(')')" class="btn btn-outline-light" >)</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('/')" class="btn btn-outline-light" >∕</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('^')" class="btn btn-outline-light" >x<sup>y</sup></button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('√')" class="btn btn-outline-light" >√</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('l')" class="btn btn-outline-light" >ln</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('e')" class="btn btn-outline-light" >ℯ</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression(',')" class="btn btn-outline-light" >,</button></mat-grid-tile>
+        <mat-grid-tile><button type="button" id="operator" (click)="editExpression('x')" class="btn btn-outline-light" >x</button></mat-grid-tile>
+  
+        <mat-grid-tile colspan=2 ><button type="button" id="operator" (click)="done()" class="btn btn-outline-light" >fatto</button></mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>

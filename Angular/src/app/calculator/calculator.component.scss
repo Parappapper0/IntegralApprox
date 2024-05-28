@@ -1,0 +1,29 @@
+#calculator {
+
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    width: 250px; 
+    background-color: rgb(39, 39, 39);
+    padding:20px;
+    border-radius: 20px;
+}
+
+
+.button-table {
+
+    height: min-content;
+}
+
+#operator {
+    padding: 1px;
+    height: 100%;
+    width: 100%;
+}
+
+#textbox {
+
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}

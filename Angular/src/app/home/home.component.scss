@@ -1,0 +1,109 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+table{
+    margin: auto;
+}
+
+label{
+    color: white;
+}
+
+.container-fluid{
+    
+    padding:10px;
+    
+    max-width: 800px;
+    min-height: 535px;
+    max-height: 600px;
+    background: linear-gradient( #343a40,  #343a40) padding-box,
+                linear-gradient(to bottom right, #ff2347, #ff9c08, #e630e6, #44b8ee) border-box;
+    border-radius: 20px;
+    border: 10px solid transparent;
+
+  
+    box-shadow: 0px 0px 20px 6px  #131516;
+      
+}
+
+.inputs-field{
+    margin-top: 25px;
+
+}
+
+.error{
+    margin-top: 5px;
+}
+
+.form-control{
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #343a40;
+    border: 1px solid rgb(126, 126, 126);
+    max-width: 200px;
+    color: white;
+    box-shadow: 0px 0px 10px 1px  #131516;
+    
+}
+
+.btn-group{
+    box-shadow: 0px 0px 10px 1px  #131516;
+}
+
+.btn-warning{
+    box-shadow: 0px 0px 8px 1px  #131516;
+}
+
+
+.bounds-inputs{
+    max-width: 60px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.n-input{
+    max-width: 85px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.label-radio{
+    margin-bottom: -15px;
+}
+
+.btn-outline-custom{
+    
+    height: 40px;
+    width: 80px;
+
+    background: linear-gradient( #343a40,  #343a40) padding-box,
+    linear-gradient(to bottom right, #ff2347, #ff9c08, #e630e6, #44b8ee) border-box;
+    color: white;
+
+    box-shadow: 0px 0px 10px 2px  #131516;
+}
+
+.back-btn{
+    width: 90px;
+    height: 60px;
+    font-size: 18px;
+    padding: 2px;
+    position: relative;
+    top: 240px;
+}
+
+.results{
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+   
+}
+
+
+.title{
+    font-size: 30px;
+    color: white;
+    font-style: italic;
+}

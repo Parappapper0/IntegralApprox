@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\camal\Desktop\Desktop\IntegralApprox\Socket\Source.c(178,46): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  Project2.vcxproj -> C:\Users\camal\Desktop\Desktop\IntegralApprox\Socket\x64\Debug\Project2.exe
